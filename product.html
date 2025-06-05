@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар - ArtDecor Kostanay</title>
+    <meta name="description" content="Подробная информация о товаре ArtDecor Kostanay">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Товар - ArtDecor Kostanay">
+    <meta property="og:description" content="Высококачественный декоративный элемент для интерьера">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Lightbox2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b7a86a'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    Art<span class="logo-accent">Decor</span>
+                </a>
+                
+                <div class="navigation-wrapper">
+                    <a href="tel:+77055285829" class="header-phone">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        +7 (705) 528-58-29
+                    </a>
+                    
+                    <nav class="main-menu-nav" aria-label="Основная навигация">
+                        <ul class="main-menu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="index.html#about">О нас</a></li>
+                            <li><a href="catalog.html">Каталог</a></li>
+                            <li><a href="index.html#gallery">Галерея</a></li>
+                            <li><a href="index.html#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <button class="menu-toggle" aria-expanded="false" aria-label="Открыть мобильное меню">
+                        <span class="menu-toggle-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="site-main product-page">
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs-section">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                    <ol class="breadcrumbs-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li id="breadcrumbCategory" class="breadcrumb-category" style="display: none;">
+                            <a href="catalog.html" id="breadcrumbCategoryLink">
+                                <span id="breadcrumbCategoryText"></span>
+                            </a>
+                        </li>
+                        <li class="current" id="breadcrumbProductName">Товар</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="product-section section-padding">
+            <div class="container">
+                <div id="productContainer" class="product-container">
+                    <!-- Product content will be loaded here -->
+                    <div class="product-gallery">
+                        <div class="main-image-container">
+                            <img id="mainProductImage" 
+                                 src="https://via.placeholder.com/600x500.png?text=Загрузка..." 
+                                 alt="Основное изображение товара" 
+                                 class="main-product-image">
+                        </div>
+                        <div id="productThumbnails" class="product-thumbnails">
+                            <!-- Thumbnails will be added here -->
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h1 id="productName" class="product-title">Загрузка...</h1>
+                        
+                        <div class="product-price">
+                            <span id="productPriceValue" class="price-value">-</span>
+                            <span id="productPriceUnit" class="price-unit"></span>
+                        </div>
+
+                        <div id="productShortDescription" class="product-description">
+                            <p>Загрузка описания...</p>
+                        </div>
+
+                        <div class="product-actions">
+                            <a id="buyWhatsAppBtn" 
+                               href="#" 
+                               class="btn btn-primary btn-whatsapp"
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                Купить через WhatsApp
+                            </a>
+                            
+                            <a id="downloadLink3D" 
+                               href="#" 
+                               class="btn btn-outline"
+                               style="display: none;"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                Скачать 3D модель
+                            </a>
+                        </div>
+
+                        <!-- Product Details Tabs -->
+                        <div class="product-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="characteristics">
+                                    Характеристики
+                                </button>
+                                <button class="tab-button" data-tab="description">
+                                    Описание
+                                </button>
+                            </div>
+
+                            <div class="tab-content">
+                                <div id="characteristicsTab" class="tab-pane active">
+                                    <dl id="characteristicsList" class="characteristics-list">
+                                        <!-- Characteristics will be loaded here -->
+                                    </dl>
+                                </div>
+
+                                <div id="descriptionTab" class="tab-pane">
+                                    <div id="productFullDescriptionContent" class="full-description">
+                                        <!-- Full description will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> ArtDecor Kostanay. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+    <script src="product-loader.js"></script>
+
+    <!-- Product Image Change Function -->
+    <script>
+        function changeMainImageJS(newSrc, thumbnailElement, altText) {
+            const mainImage = document.getElementById('mainProductImage');
+            if (mainImage) {
+                mainImage.src = newSrc;
+                mainImage.alt = altText;
+                
+                // Update active thumbnail
+                document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active-thumbnail'));
+                if (thumbnailElement) {
+                    thumbnailElement.classList.add('active-thumbnail');
+                }
+            }
+        }
+
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+                    
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding pane
+                    button.classList.add('active');
+                    const targetPane = document.getElementById(targetTab + 'Tab');
+                    if (targetPane) {
+                        targetPane.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
