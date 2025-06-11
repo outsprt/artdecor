@@ -249,6 +249,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-menu a:focus-visible {
     color: var(--brand-color-gold);
+    outline: 2px solid var(--accent-color-focus);
+    outline-offset: 2px;
 }
 
 .header-phone {
