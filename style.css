@@ -110,6 +110,26 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     border-width: 0;
 }
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: var(--spacing-sm);
+    top: var(--spacing-sm);
+    width: auto;
+    height: auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+    text-decoration: none;
+    z-index: 1000;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                       STYLES FOR HEADER, MAIN, FOOTER                     */
