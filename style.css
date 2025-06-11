@@ -374,19 +374,46 @@ h1, h2, h3, h4, h5, h6 {
 /*                                  BUTTONS                                   */
 /* -------------------------------------------------------------------------- */
 .btn {
-    display: inline-block;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    font-weight: 700;
-    padding: var(--spacing-md) var(--spacing-xl);
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
-    outline: none;
-    text-align: center;
+    font-size: 16px;
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --brand-color-gold: #b7a86a;
+    --brand-color-gold-hover: #a3945a;
+    --brand-color-gold-focus: #cbb979;
+    --brand-color-gold-rgb: 183, 168, 106;
+    --brand-color-graphite: #4b5758;
+    --brand-color-graphite-rgb: 75, 87, 88;
+    --main-bg-color: #1e2424;
+    --secondary-bg-color: #2a3031;
+    --main-text-color: #e0e0e0;
+    --heading-text-color: #ffffff;
+    --accent-color: var(--brand-color-gold);
+    --accent-color-hover: var(--brand-color-gold-hover);
+    --accent-color-focus: var(--brand-color-gold-focus);
+    --muted-text-color: #a0a0a0;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+    --container-width: 1200px;
+    --container-padding: 1rem;
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--main-text-color);
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(var(--brand-color-graphite-rgb), 0.3);
 }
 
 .btn:focus-visible {
