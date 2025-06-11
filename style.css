@@ -730,10 +730,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 .contact-socials {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    border-top: 1px solid var(--secondary-bg-color);
+    padding-top: var(--spacing-sm);
+    margin-top: var(--spacing-md);
 }
 
 .socials-title {
@@ -747,13 +751,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--brand-color-gold);
-    color: var(--main-bg-color);
-    transition: background-color 0.3s ease;
+    background-color: var(--secondary-bg-color);
+    color: var(--muted-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: var(--brand-color-gold-hover);
+    background-color: var(--brand-color-gold);
+    color: var(--main-bg-color);
 }
 
 .contact-map-wrapper-v2 iframe {
