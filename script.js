@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('ArtDecor Kostanay Global script loaded!');
 
     // --- Mobile menu ---
     const menuToggle = document.querySelector('.menu-toggle');
