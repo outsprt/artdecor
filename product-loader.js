@@ -166,7 +166,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (error) {
         console.error("Ошибка при загрузке или обработке данных товара:", error);
-        displayError(`Произошла ошибка при загрузке информации о товаре. Пожалуйста, попробуйте позже.<br><span class="error-details">Детали: ${error.message}</span>`, "Ошибка загрузки - ArtDecor Kostanay");
+        displayError(
+            'Произошла ошибка при загрузке информации о товаре. Пожалуйста, попробуйте позже.',
+            `Детали: ${error.message}`,
+            'Ошибка загрузки - ArtDecor Kostanay'
+        );
     }
 });
 
@@ -182,7 +186,15 @@ function updateMetaTag(attributeName, attributeValue, content) {
 }
 
 // Helper function to display errors
-function displayError(message, pageTitle) {
+function displayError(message, detailsOrPageTitle, maybePageTitle) {
+    let details = '';
+    let pageTitle = detailsOrPageTitle;
+
+    if (typeof maybePageTitle !== 'undefined') {
+        details = detailsOrPageTitle;
+        pageTitle = maybePageTitle;
+    }
+
     const productContainer = document.getElementById('productContainer');
     if (productContainer) {
         productContainer.textContent = '';
@@ -200,7 +212,16 @@ function displayError(message, pageTitle) {
 
         const p = document.createElement('p');
         p.style.fontSize = '1.1rem';
-        setSanitizedHTML(p, message);
+        p.textContent = message;
+
+        if (details) {
+            const br = document.createElement('br');
+            const span = document.createElement('span');
+            span.className = 'error-details';
+            span.textContent = details;
+            p.appendChild(br);
+            p.appendChild(span);
+        }
 
         const link = document.createElement('a');
         link.href = 'catalog.html';
@@ -214,6 +235,7 @@ function displayError(message, pageTitle) {
 
         productContainer.appendChild(wrapper);
     }
+
     if (pageTitle) {
         document.title = pageTitle;
     }
