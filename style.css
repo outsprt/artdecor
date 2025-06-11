@@ -642,26 +642,35 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--secondary-bg-color);
 }
 
-.contact-content {
+.contact-container-v2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     align-items: start;
 }
 
-.contact-info {
+.contact-details-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.contact-list-v2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
 }
 
-.contact-item {
+.contact-list-v2 li {
     display: flex;
-    align-items: flex-start;
     gap: var(--spacing-md);
+    align-items: flex-start;
 }
 
-.contact-icon {
+.contact-list-v2 .icon {
     background-color: var(--brand-color-gold);
     color: var(--main-bg-color);
     width: 50px;
@@ -673,19 +682,17 @@ h1, h2, h3, h4, h5, h6 {
     flex-shrink: 0;
 }
 
-.contact-details h3 {
+.contact-list-v2 strong {
+    display: block;
     margin-bottom: var(--spacing-xs);
     font-size: 1.1rem;
 }
 
-.contact-details p,
-.contact-details a {
-    color: var(--muted-text-color);
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: var(--accent-color);
+.contact-map-v2 iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
 }
 
 /* Contact Form */
@@ -1024,10 +1031,10 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
-    .contact-content {
+    .contact-container-v2 {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
     }
+
 
     .product-container {
         grid-template-columns: 1fr;
