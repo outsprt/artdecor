@@ -669,77 +669,77 @@ h1, h2, h3, h4, h5, h6 {
 /*                               CONTACT SECTION                              */
 /* -------------------------------------------------------------------------- */
 .contact-section {
-    background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color);
 }
 
 .contact-container-v2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xxl);
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxl);
+  align-items: stretch;
 }
 
 .contact-details-v2 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  justify-content: center;
 }
 
 .contact-title-left {
-    text-align: left;
-    margin-bottom: var(--spacing-md);
+  text-align: left;
+  margin-bottom: var(--spacing-md);
 }
 
 .contact-info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-md);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
 }
+
 .contact-icon {
-    color: var(--brand-color-gold);
-    font-size: 1.5rem;
-    margin-top: 0.25rem;
+  color: var(--brand-color-gold);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
 }
-
-
 
 .contact-socials {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    border-top: 1px solid var(--secondary-bg-color);
-    padding-top: var(--spacing-sm);
-    margin-top: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  border-top: 1px solid var(--secondary-bg-color);
+  padding-top: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
 .socials-title {
-    margin-right: var(--spacing-sm);
+  margin-right: var(--spacing-sm);
 }
 
 .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--secondary-bg-color);
-    color: var(--muted-text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-bg-color);
+  color: var(--muted-text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: var(--brand-color-gold);
-    color: var(--main-bg-color);
+  background-color: var(--brand-color-gold);
+  color: var(--main-bg-color);
 }
 
 .contact-map-wrapper-v2 iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-    border-radius: 8px;
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 8px;
 }
+
 
 /* -------------------------------------------------------------------------- */
 /*                               CATALOG PAGE                                 */
