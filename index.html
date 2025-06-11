@@ -289,78 +289,81 @@
                     </p>
                 </div>
 
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
+                <div class="contact-container-v2">
+                    <div class="contact-details-v2">
+                        <ul class="contact-list-v2">
+                            <li>
+                                <span class="icon">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                </span>
+                                <div>
+                                    <strong>Телефон</strong>
+                                    <a href="tel:+77055285829">+7 (705) 528-58-29</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                </span>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <a href="https://wa.me/77055285829" target="_blank" rel="noopener noreferrer">
+                                        Написать в WhatsApp
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                </span>
+                                <div>
+                                    <strong>Адрес</strong>
+                                    <p>г. Костанай, Казахстан</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="icon">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                </span>
+                                <div>
+                                    <strong>Режим работы</strong>
+                                    <p>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 16:00<br>Вс: выходной</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <form id="contactForm" class="contact-form">
+                            <h3>Отправить сообщение</h3>
+
+                            <div class="form-group">
+                                <label for="name">Ваше имя *</label>
+                                <input type="text" id="name" name="name" required>
                             </div>
-                            <div class="contact-details">
-                                <h3>Телефон</h3>
-                                <a href="tel:+77055285829">+7 (705) 528-58-29</a>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
                             </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone">
                             </div>
-                            <div class="contact-details">
-                                <h3>WhatsApp</h3>
-                                <a href="https://wa.me/77055285829" target="_blank" rel="noopener noreferrer">
-                                    Написать в WhatsApp
-                                </a>
+
+                            <div class="form-group">
+                                <label for="message">Сообщение *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Адрес</h3>
-                                <p>г. Костанай, Казахстан</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock" aria-hidden="true"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Режим работы</h3>
-                                <p>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 16:00<br>Вс: выходной</p>
-                            </div>
-                        </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Отправить сообщение
+                            </button>
+                        </form>
                     </div>
 
-                    <form id="contactForm" class="contact-form">
-                        <h3>Отправить сообщение</h3>
-                        
-                        <div class="form-group">
-                            <label for="name">Ваше имя *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Сообщение *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">
-                            Отправить сообщение
-                        </button>
-                    </form>
+                    <div class="contact-map-v2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.455464926826!2d63.62462!3d53.21417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424e3e74e6a1c67d%3A0xf0e1b032b0b8474c!2z0JDQstGC0L7QutC-0LzQtdC90YLRgdC60L7Qs9C-LCDQmtC-0YDQsNC90LjQstCwLCDQo9Cz0YDQsNC90LrQviwg0JrRgNCw0LvQu9C-0L3QsCDQodCw0L_QsNGA0YDRgdC6!5e0!3m2!1sru!2skz!4v1711703300000!5m2!1sru!2skz" loading="lazy" title="ArtDecor Kostanay на карте" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
