@@ -110,6 +110,26 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     border-width: 0;
 }
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: var(--spacing-sm);
+    top: var(--spacing-sm);
+    width: auto;
+    height: auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+    text-decoration: none;
+    z-index: 1000;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                       STYLES FOR HEADER, MAIN, FOOTER                     */
@@ -716,6 +736,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info-wrapper {
+.contact-details-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.contact-list-v2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xl);
@@ -733,13 +763,13 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-lg);
 }
 
-.contact-item {
+.contact-list-v2 li {
     display: flex;
-    align-items: flex-start;
     gap: var(--spacing-md);
+    align-items: flex-start;
 }
 
-.contact-icon {
+.contact-list-v2 .icon {
     background-color: var(--brand-color-gold);
     color: var(--main-bg-color);
     width: 50px;
@@ -751,19 +781,17 @@ h1, h2, h3, h4, h5, h6 {
     flex-shrink: 0;
 }
 
-.contact-details h3 {
+.contact-list-v2 strong {
+    display: block;
     margin-bottom: var(--spacing-xs);
     font-size: 1.1rem;
 }
 
-.contact-details p,
-.contact-details a {
-    color: var(--muted-text-color);
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: var(--accent-color);
+.contact-map-v2 iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
 }
 
 /* Map */
@@ -1064,9 +1092,8 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
-    .contact-content {
+    .contact-container-v2 {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
     }
 
     .contact-info {
