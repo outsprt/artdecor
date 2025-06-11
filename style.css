@@ -154,6 +154,12 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.main-menu-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .navigation-wrapper {
     display: flex;
     align-items: center;
@@ -184,6 +190,7 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     display: flex;
     gap: var(--spacing-lg);
+    justify-content: center;
 }
 
 .main-menu a {
@@ -647,6 +654,17 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     align-items: start;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.contact-info-wrapper .section-header {
+    text-align: left;
+    margin-bottom: 0;
 }
 
 .contact-info {
