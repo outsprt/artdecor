@@ -33,19 +33,41 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const imageSrc = product.mainImage || 'https://via.placeholder.com/400x300.png?text=ArtDecor';
             const imageAlt = (product.imageAlts && product.imageAlts[0]) ? product.imageAlts[0] : `Изображение ${product.name}`;
-            
+
             let priceDisplay = product.price ? `${product.price} ${product.priceUnit || ''}`.trim() : 'Цена по запросу';
 
-            card.innerHTML = `
-                <img src="${imageSrc}" alt="${imageAlt}" class="catalog-card-image">
-                <div class="catalog-card-content">
-                    <h3 class="catalog-card-title">${product.name}</h3>
-                    <p class="product-card-price">${priceDisplay}</p>
-                    <span class="catalog-card-link">Подробнее <span class="arrow">→</span></span>
-                </div>
-            `;
-            
-            const imgElement = card.querySelector('.catalog-card-image');
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = imageAlt;
+            img.className = 'catalog-card-image';
+
+            const content = document.createElement('div');
+            content.className = 'catalog-card-content';
+
+            const title = document.createElement('h3');
+            title.className = 'catalog-card-title';
+            title.textContent = product.name;
+
+            const price = document.createElement('p');
+            price.className = 'product-card-price';
+            price.textContent = priceDisplay;
+
+            const linkSpan = document.createElement('span');
+            linkSpan.className = 'catalog-card-link';
+            linkSpan.textContent = 'Подробнее ';
+            const arrow = document.createElement('span');
+            arrow.className = 'arrow';
+            arrow.textContent = '→';
+            linkSpan.appendChild(arrow);
+
+            content.appendChild(title);
+            content.appendChild(price);
+            content.appendChild(linkSpan);
+
+            card.appendChild(img);
+            card.appendChild(content);
+
+            const imgElement = img;
             imgElement.onerror = function() {
                 this.src = 'https://via.placeholder.com/400x300.png?text=Image+Error';
                 this.alt = 'Ошибка загрузки изображения товара';
