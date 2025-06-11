@@ -39,5 +39,15 @@
         return template.innerHTML;
     }
 
+    function setSanitizedHTML(element, htmlString) {
+        element.textContent = '';
+        if (!htmlString) return;
+        const sanitized = sanitizeHTML(htmlString);
+        const template = document.createElement('template');
+        template.innerHTML = sanitized;
+        element.appendChild(template.content.cloneNode(true));
+    }
+
     global.sanitizeHTML = sanitizeHTML;
+    global.setSanitizedHTML = setSanitizedHTML;
 })(window);
