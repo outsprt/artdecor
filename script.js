@@ -49,51 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Contact form handling (only on homepage) ---
-    if (document.body.classList.contains('home-page')) {
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const nameInput = document.getElementById('name');
-                const emailInput = document.getElementById('email');
-                const messageInput = document.getElementById('message');
-                const submitButton = this.querySelector('button[type="submit"]');
-
-                // Simple validation
-                if (nameInput.value.trim() === '') {
-                    alert('Пожалуйста, введите ваше имя.');
-                    nameInput.focus();
-                    return;
-                }
-
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (emailInput.value.trim() === '' || !emailPattern.test(emailInput.value.trim())) {
-                    alert('Пожалуйста, введите корректный Email.');
-                    emailInput.focus();
-                    return;
-                }
-
-                if (messageInput.value.trim() === '') {
-                    alert('Пожалуйста, введите ваше сообщение.');
-                    messageInput.focus();
-                    return;
-                }
-
-                // Simulate sending
-                submitButton.disabled = true;
-                submitButton.textContent = 'Отправка...';
-
-                setTimeout(() => {
-                    alert('Спасибо! Ваше сообщение "отправлено" (в режиме прототипа). Мы свяжемся с вами в ближайшее время.');
-                    contactForm.reset();
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Отправить сообщение';
-                }, 1000);
-            });
-        }
-    }
 
     // --- Lightbox2 settings (if loaded) ---
     if (typeof lightbox !== 'undefined') {
