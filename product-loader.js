@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('productPriceUnit').textContent = product.priceUnit || '';
             const shortDescElement = document.getElementById('productShortDescription');
             if (shortDescElement) {
-                 shortDescElement.innerHTML = product.shortDescription || '<p>Описание скоро появится.</p>';
+                shortDescElement.textContent = '';
+                const p = document.createElement('p');
+                p.textContent = product.shortDescription || 'Описание скоро появится.';
+                shortDescElement.appendChild(p);
             }
 
             // Fill gallery
@@ -127,10 +130,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Fill full description
             const fullDescriptionContainer = document.getElementById('productFullDescriptionContent');
             if (fullDescriptionContainer) {
+                fullDescriptionContainer.textContent = '';
                 if (product.fullDescription) {
-                    fullDescriptionContainer.innerHTML = product.fullDescription;
+                    fullDescriptionContainer.innerHTML = sanitizeHTML(product.fullDescription);
                 } else {
-                    fullDescriptionContainer.innerHTML = '<p>Подробное описание отсутствует.</p>';
+                    const p = document.createElement('p');
+                    p.textContent = 'Подробное описание отсутствует.';
+                    fullDescriptionContainer.appendChild(p);
                 }
             }
 
@@ -180,13 +186,34 @@ function updateMetaTag(attributeName, attributeValue, content) {
 function displayError(message, pageTitle) {
     const productContainer = document.getElementById('productContainer');
     if (productContainer) {
-        productContainer.innerHTML = `
-            <div class="error-container" style="text-align: center; padding: var(--spacing-xxl); color: var(--muted-text-color);">
-                <h1 style="color: var(--brand-color-gold); margin-bottom: var(--spacing-md);">Ошибка</h1>
-                <p style="font-size: 1.1rem;">${message}</p>
-                <a href="catalog.html" class="btn btn-primary" style="margin-top: var(--spacing-lg);">Вернуться в каталог</a>
-            </div>
-        `;
+        productContainer.textContent = '';
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'error-container';
+        wrapper.style.textAlign = 'center';
+        wrapper.style.padding = 'var(--spacing-xxl)';
+        wrapper.style.color = 'var(--muted-text-color)';
+
+        const title = document.createElement('h1');
+        title.style.color = 'var(--brand-color-gold)';
+        title.style.marginBottom = 'var(--spacing-md)';
+        title.textContent = 'Ошибка';
+
+        const p = document.createElement('p');
+        p.style.fontSize = '1.1rem';
+        p.innerHTML = sanitizeHTML(message);
+
+        const link = document.createElement('a');
+        link.href = 'catalog.html';
+        link.className = 'btn btn-primary';
+        link.style.marginTop = 'var(--spacing-lg)';
+        link.textContent = 'Вернуться в каталог';
+
+        wrapper.appendChild(title);
+        wrapper.appendChild(p);
+        wrapper.appendChild(link);
+
+        productContainer.appendChild(wrapper);
     }
     if (pageTitle) {
         document.title = pageTitle;
