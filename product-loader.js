@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 buyWhatsAppBtn.rel = 'noopener noreferrer'; 
 
                 buyWhatsAppBtn.addEventListener('click', (e) => {
-                    console.log(`Пользователь нажал "Купить через WhatsApp" для товара: ${product.name}`);
                 });
             }
 
