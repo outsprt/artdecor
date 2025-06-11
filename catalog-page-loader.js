@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             catalogMessage.textContent = message;
             catalogMessage.style.display = 'block';
         }
-        if (productGrid) productGrid.innerHTML = '';
+        if (productGrid) productGrid.textContent = '';
     };
 
     // Function to display products
     const displayProducts = (productsToDisplay) => {
         if (!productGrid || !catalogMessage) return;
         
-        productGrid.innerHTML = '';
+        productGrid.textContent = '';
         catalogMessage.style.display = 'none';
 
         if (productsToDisplay.length === 0) {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Function to create and display category filters
     const displayCategoryFilters = (products) => {
         if (!categoryFiltersContainer) return;
-        categoryFiltersContainer.innerHTML = '';
+        categoryFiltersContainer.textContent = '';
 
         const categories = ['Все категории', ...new Set(products.map(p => p.category).filter(Boolean))];
 

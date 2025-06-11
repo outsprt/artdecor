@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Fill gallery
             const mainProductImage = document.getElementById('mainProductImage');
             const thumbnailsContainer = document.getElementById('productThumbnails');
-            thumbnailsContainer.innerHTML = ''; 
+            thumbnailsContainer.textContent = '';
 
             mainProductImage.src = product.mainImage || 'https://via.placeholder.com/600x500.png?text=Фото+отсутствует';
             mainProductImage.alt = (product.imageAlts && product.imageAlts[0]) ? product.imageAlts[0] : `${product.name} - основное изображение`;
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Fill characteristics
             const characteristicsList = document.getElementById('characteristicsList');
             if (characteristicsList) {
-                characteristicsList.innerHTML = '';
+                characteristicsList.textContent = '';
                 if (product.characteristics && product.characteristics.length > 0) {
                     product.characteristics.forEach(char => {
                         const dt = document.createElement('dt');
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (fullDescriptionContainer) {
                 fullDescriptionContainer.textContent = '';
                 if (product.fullDescription) {
-                    fullDescriptionContainer.innerHTML = sanitizeHTML(product.fullDescription);
+                    setSanitizedHTML(fullDescriptionContainer, product.fullDescription);
                 } else {
                     const p = document.createElement('p');
                     p.textContent = 'Подробное описание отсутствует.';
@@ -200,7 +200,7 @@ function displayError(message, pageTitle) {
 
         const p = document.createElement('p');
         p.style.fontSize = '1.1rem';
-        p.innerHTML = sanitizeHTML(message);
+        setSanitizedHTML(p, message);
 
         const link = document.createElement('a');
         link.href = 'catalog.html';
