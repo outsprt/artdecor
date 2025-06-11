@@ -680,10 +680,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
-.contact-info {
+.contact-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
 }
 
 .contact-group {
@@ -705,18 +707,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    padding: var(--spacing-md);
 }
 
 .contact-icon {
-    background-color: var(--brand-color-gold);
-    color: var(--main-bg-color);
-    width: 50px;
-    height: 50px;
+    background-color: transparent;
+    color: var(--brand-color-gold);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    border: 2px solid var(--brand-color-gold);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    font-size: 1.2rem;
 }
 
 .contact-details h3 {
@@ -1038,6 +1045,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contact-info {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .contact-list {
         grid-template-columns: 1fr;
     }
 
@@ -1111,5 +1120,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .product-actions {
         gap: var(--spacing-sm);
+    }
+
+    .contact-info {
+        gap: var(--spacing-md);
     }
 }
