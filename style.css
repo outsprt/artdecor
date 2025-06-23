@@ -345,6 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-media {
+.hero-bg-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -358,6 +359,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .hero-overlay {
@@ -1134,6 +1137,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px), (prefers-reduced-data: reduce) {
     .hero-media {
+    .hero-bg-video {
         display: none;
     }
 }
