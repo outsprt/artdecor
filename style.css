@@ -344,6 +344,32 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
+.hero-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
 .hero-title {
     font-size: 3rem;
     margin-bottom: var(--spacing-md);
@@ -1103,5 +1129,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .product-actions {
         gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 768px), (prefers-reduced-data: reduce) {
+    .hero-media {
+        display: none;
     }
 }
