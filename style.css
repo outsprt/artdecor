@@ -168,23 +168,20 @@ h1, h2, h3, h4, h5, h6 {
 /* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
+
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-menu-nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.navigation-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
     align-items: center;
     gap: var(--spacing-lg);
 }
+
+.main-menu-nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 
 .logo {
     font-family: var(--font-primary);
@@ -260,7 +257,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     white-space: nowrap;
     transition: color 0.3s ease;
-    margin-left: var(--spacing-lg);
 }
 
 .header-phone:hover,
@@ -1092,13 +1088,12 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.8rem;
     }
 
-    .navigation-wrapper {
+    .header-container {
         gap: var(--spacing-sm);
     }
 
     .header-phone {
         font-size: 0.9rem;
-        margin-left: var(--spacing-md);
     }
 
     .btn {
