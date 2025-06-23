@@ -59,4 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
           'disableScrolling': true
         });
     }
+
+    // --- Product tabs ---
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    if (tabButtons.length && tabPanes.length) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                button.classList.add('active');
+                const targetPane = document.getElementById(targetTab + 'Tab');
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+    }
 });

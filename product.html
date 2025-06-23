@@ -178,44 +178,5 @@
     <script defer src="sanitizer.js"></script>
     <script defer src="product-loader.js"></script>
 
-    <!-- Product Image Change Function -->
-    <script>
-        function changeMainImageJS(newSrc, thumbnailElement, altText) {
-            const mainImage = document.getElementById('mainProductImage');
-            if (mainImage) {
-                mainImage.src = newSrc;
-                mainImage.alt = altText;
-                
-                // Update active thumbnail
-                document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active-thumbnail'));
-                if (thumbnailElement) {
-                    thumbnailElement.classList.add('active-thumbnail');
-                }
-            }
-        }
-
-        // Tab functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabPanes = document.querySelectorAll('.tab-pane');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetTab = button.dataset.tab;
-                    
-                    // Remove active class from all buttons and panes
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabPanes.forEach(pane => pane.classList.remove('active'));
-                    
-                    // Add active class to clicked button and corresponding pane
-                    button.classList.add('active');
-                    const targetPane = document.getElementById(targetTab + 'Tab');
-                    if (targetPane) {
-                        targetPane.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
