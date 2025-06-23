@@ -338,6 +338,34 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
 }
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg-video {
+        display: none;
+    }
+    .hero-section {
+        background-image: url('images/hero/hero.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
 
 .hero-container {
     position: relative;
