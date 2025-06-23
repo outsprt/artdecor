@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Function to display message
     const showMessage = (message) => {
         if (catalogMessage) {
-            catalogMessage.textContent = message;
             catalogMessage.style.display = 'block';
+            catalogMessage.textContent = message;
         }
         if (productGrid) productGrid.textContent = '';
     };
@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Main loading logic
     try {
         if (catalogMessage) {
-            catalogMessage.textContent = 'Загрузка товаров...';
             catalogMessage.style.display = 'block';
+            catalogMessage.textContent = 'Загрузка товаров...';
         }
 
         const response = await fetch('products.json');
